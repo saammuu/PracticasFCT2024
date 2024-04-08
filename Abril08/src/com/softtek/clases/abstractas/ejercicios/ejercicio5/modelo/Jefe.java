@@ -3,6 +3,9 @@ package com.softtek.clases.abstractas.ejercicios.ejercicio5.modelo;
 public class Jefe implements Empleado{
     private Informe informe;
 
+    public Jefe() {
+    }
+
     public Jefe(Informe informe) {
         this.informe = informe;
     }
@@ -14,6 +17,6 @@ public class Jefe implements Empleado{
 
     @Override
     public String getInformes() {
-        return "Obteniendo informes para el Jefe";
+        return informe.getInforme();
     }
 }

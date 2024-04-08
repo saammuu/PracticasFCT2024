@@ -45,6 +45,6 @@ public class Secretario implements Empleado{
 
     @Override
     public String getInformes() {
-        return "Obteniendo informes para el Secretario";
+        return informe.getInforme();
     }
 }

@@ -14,6 +14,6 @@ public class Director implements Empleado{
 
     @Override
     public String getInformes() {
-        return "Obteniendo informes para el Director";
+        return informe.getInforme();
     }
 }
