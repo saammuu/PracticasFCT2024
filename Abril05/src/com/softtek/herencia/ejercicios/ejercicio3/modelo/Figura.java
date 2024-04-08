@@ -1,6 +1,6 @@
 package com.softtek.herencia.ejercicios.ejercicio3.modelo;
 
-public class Figura {
+public abstract class Figura {
     protected int x;
     protected int y;
 
@@ -28,9 +28,7 @@ public class Figura {
         this.y = y;
     }
 
-    public double calcularArea(){
-        return 0;
-    }
+    public abstract double calcularArea();
 
     public String mostrarPosicion(){
         return x+", " + y;
