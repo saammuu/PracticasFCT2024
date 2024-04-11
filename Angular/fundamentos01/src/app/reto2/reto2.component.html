@@ -1,0 +1,39 @@
+<h1>RETO 2</h1>
+<p>
+    Crear un proyecto para realizar un componente que reciba los datos que se
+    muestran en la imagen.
+    Únicamente el botón que se programa es el de ingresar.
+    Cuando se haga clic debe salir el mensaje
+    Producto dado de alta, siempre y cuando los precios y el stock sean mayores
+    que cero.
+</p>
+
+<div class="container">
+
+        <div class="form-group">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" class="form-control" id="descripcion">
+        </div>
+    
+        <div class="form-group">
+            <label for="codigo">Codigo</label>
+            <input type="number" id="codigo" class="form-control" class="form-control">
+        </div>
+    
+        <div class="form-group">
+            <label for="costo">Precio costo</label>
+            <input type="number" id="costo" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="venta">Precio venta</label>
+            <input type="number" id="venta" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock ideal</label>
+            <input type="number" id="stock" class="form-control" >
+        </div>
+    
+        <button (click)="ingresarProducto()" class="btn btn-primary">Ingresar</button>
+    
+    <p [hidden]="!mensaje" class="mensaje">{{ mensaje }}</p>
+</div>

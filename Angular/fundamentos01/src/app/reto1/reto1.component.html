@@ -1,0 +1,28 @@
+<h1>RETO 1</h1>
+<p>
+    Crear un proyecto para realizar un componente que reciba los datos que se
+    muestran en la imagen.
+    La validación que se tiene que hacer es verificar que la caja de texto Password
+    y Repeat the password sean iguales
+    En caso de ser iguales mostrar un mensaje de Bienvenida y caso contrario
+    mostrar un mensaje de usuario o contraseña inválidos.
+</p>
+
+<h3>Register</h3>
+<div class="container">
+    <div class="form-group">
+        <input type="text" placeholder="email" [(ngModel)]="email" class="form-control">
+    </div>
+     <!-- <br> <br> -->
+     <div class="form-group">
+        <input type="password" placeholder="password" [(ngModel)]="password" (input)="validarPassword()" class="form-control">
+     </div>
+    
+     <div class="form-group">
+        <input type="password" placeholder="Repeat password" [(ngModel)]="password2" (input)="validarPassword()" class="form-control">
+     </div>
+    
+    
+    <p>Tu email es: {{email}}</p>
+    <p>¿Son iguales las contraseñas? {{mensaje}}</p>
+</div>
