@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.softtek</groupId>
-    <artifactId>AccesoBBDDriver</artifactId>
+    <artifactId>Abril11</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -26,4 +26,5 @@
             <version>42.6.0</version>
         </dependency>
     </dependencies>
+
 </project>
