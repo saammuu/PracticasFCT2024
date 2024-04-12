@@ -1,16 +1,16 @@
-<div>
-    <h2>Calculadora</h2>
+<div class="container">
+    <h2 class="display-4">Calculadora</h2>
     <label>Primer número:</label>
-    <input type="number" [(ngModel)]="numero1">
+    <input type="number" class="form-control" [(ngModel)]="numero1">
     <br>
     <label>Segundo número:</label>
-    <input type="number" [(ngModel)]="numero2">
+    <input type="number" class="form-control" [(ngModel)]="numero2">
     <br>
-    <button (click)="sumar()">Sumar</button>
-    <button (click)="restar()">Restar</button>
-    <button (click)="multiplicar()">Multiplicar</button>
-    <button (click)="dividir()">Dividir</button>
+    <button (click)="sumar()" class="btn btn-outline-primary mr-3">Sumar</button>
+    <button (click)="restar()" class="btn btn-outline-secondary mr-3">Restar</button>
+    <button (click)="multiplicar()" class="btn btn-outline-warning mr-3">Multiplicar</button>
+    <button (click)="dividir()" class="btn btn-outline-info">Dividir</button>
     <br>
-    <p>Resultado: {{ resultado }}</p>
+    <p class="mt-3 font-weight-bold">Resultado: {{ resultado }}</p>
 </div>
   

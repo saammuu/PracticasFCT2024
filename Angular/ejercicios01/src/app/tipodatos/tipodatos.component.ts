@@ -52,7 +52,7 @@ export class TipodatosComponent {
   
  
   ejercicio3() {
-    /* EJERCICIO 3 */
+    // EJERCICIO 3
     function whichMonths(season: Temporada): string {
       let monthsInSeason: string;
       switch (season) {
