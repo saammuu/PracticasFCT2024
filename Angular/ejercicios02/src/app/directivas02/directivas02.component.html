@@ -1,0 +1,27 @@
+<h1>Ejercicio 2 de directivas</h1>
+<h3>Reserva de vuelos</h3>
+
+<label>Origen</label> <br>
+<select [(ngModel)]="origenSelected">
+    @for (or of origen; track or.id){
+        <option value={{or.value}} >{{or.label}}</option>
+    }
+</select>
+<br>
+<label>Destino</label> <br>
+<select [(ngModel)]="destinoSelected">
+    @for (des of destino; track des.id){
+        <option value={{des.value}} >{{des.label}}</option>
+    }
+</select>
+<br>
+<label>Fecha de ida</label> <br>
+<input type="date" [(ngModel)]="idaSelected">
+<br>
+<label>Fecha de vuelta</label> <br>
+<input type="date" [(ngModel)]="vueltaSelected">
+<br>
+<label>Numero de pasajeros</label> <br>
+<input type="number" [(ngModel)]="pasajeros">
+<br>
+<button (click)="mostrarInformacion()">Mostrar informacion</button>

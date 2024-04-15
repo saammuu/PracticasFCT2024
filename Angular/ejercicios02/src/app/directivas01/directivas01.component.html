@@ -1,0 +1,30 @@
+<h1>Ejercicio 1 de directivas</h1>
+
+<label >Tamaño de la RAM</label> <br>
+@for (ram of tiposRam; track ram.id) {
+    <label>{{ram.label}}</label>
+    <input type="radio" value={{ram.value}} [(ngModel)]="ramSelected">
+}
+<br>
+<label>Procesador</label>
+<select [(ngModel)]="procesadorSelected">
+    @for (proc of procesador; track proc.id){
+        <option value={{proc.value}} >{{proc.label}}</option>
+    }
+</select>
+<br>
+<label>Tarjeta grafica</label>
+@if (tarjetaGrafica) {
+    <input type="checkbox" checked [(ngModel)]="tarjetaGrafica"/>
+}@else {
+    <input type="checkbox" [(ngModel)]="tarjetaGrafica"/>
+}
+<br>
+<label >Fuentes de alimentacion: </label> 
+<select [(ngModel)]="alimentacionSelected">
+    @for (al of fuentesAlimentacion; track al.id){
+        <option value={{al.value}}>{{al.label}}</option>
+    }
+</select>
+<br>
+<button (click)="mostrarInformacion()">Mostrar informacion</button>

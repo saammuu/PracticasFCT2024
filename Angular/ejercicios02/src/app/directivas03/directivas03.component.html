@@ -1,0 +1,22 @@
+<h1>Ejercicio 3 de directiva</h1>
+<label >Genero:  </label>
+@for (genero of generos; track genero.id) {
+    <label>{{genero.label}}</label>
+    <input type="radio" value={{genero.value}} [(ngModel)]="generoSelected">
+}
+<br>
+<label>Nacionalidad </label>
+<select [(ngModel)]="nacionalidadSelected">
+    @for (nac of nacionalidades; track nac.id){
+        <option value={{nac.value}} >{{nac.label}}</option>
+    }
+</select>
+<br>
+<label>Lenguajes de programacion</label> <br>
+@for (lenguaje of lenguajesProgramacion; track $index) {
+    {{lenguaje.nombre}}
+
+    <input type="checkbox"  [value] = "lenguaje.nombre" [(ngModel)]="lenguaje.id">
+}
+<br>
+<button (click)="mostrarInformacion()">Mostrar informacion</button>
