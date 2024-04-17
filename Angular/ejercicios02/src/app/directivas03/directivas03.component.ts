@@ -29,7 +29,6 @@ export class Directivas03Component {
     {id:false, nombre:"JS"},
     {id:false, nombre:"Python"}
   ];
-  lenguajeSeleccionado:string = "";
 
   mostrarInformacion(): void {
     console.log(`Genero: ${this.generoSelected}`)
@@ -38,7 +37,6 @@ export class Directivas03Component {
  
       if(this.lenguajesProgramacion[i].id == true){
 
-        //console.log(this.lenguajesProgramacion[i].nombre)
         this.cadena+=this.lenguajesProgramacion[i].nombre;
         this.cadena += '  ';
       }

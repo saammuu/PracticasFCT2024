@@ -14,7 +14,6 @@ public class SeguroCoche {
     @Autowired
     private ITaller taller;
     private String aseguradora;
-
     public String reparar (Coche c){
         return taller.reparar(c);
     }

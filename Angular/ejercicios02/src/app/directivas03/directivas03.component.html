@@ -15,8 +15,7 @@
 <label>Lenguajes de programacion</label> <br>
 @for (lenguaje of lenguajesProgramacion; track $index) {
     {{lenguaje.nombre}}
-
-    <input type="checkbox"  [value] = "lenguaje.nombre" [(ngModel)]="lenguaje.id">
+    <input type="checkbox" [value] = "lenguaje.nombre" [(ngModel)]="lenguaje.id">
 }
 <br>
 <button (click)="mostrarInformacion()">Mostrar informacion</button>

@@ -1,0 +1,7 @@
+<h3>Listado de asignaturas</h3>
+@for (item of contenedorAsignaturas; track $index) {
+    <ul>
+        <li>{{item}}</li>
+    </ul>
+}
+<app-ej3-hijo (emitter)="anyadirAsignatura($event)"></app-ej3-hijo>

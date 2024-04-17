@@ -1,0 +1,7 @@
+<h3>Productos de la cesta</h3>
+@for (producto of cesta; track $index) {
+    <ul>
+        <li>{{producto}}</li>
+    </ul>
+}
+<app-ej2-hijo (emitter)="anyadirProductos($event)"></app-ej2-hijo>

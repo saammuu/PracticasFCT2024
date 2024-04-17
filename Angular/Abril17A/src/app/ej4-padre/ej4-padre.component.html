@@ -1,0 +1,10 @@
+<h3>Coponente padre</h3>
+<ul>
+    @for (item of contenedorPersonas; track $index) {
+        <li>{{item.nombre}} - {{item.edad}}</li>
+    }
+</ul>
+<app-ej4-hijo (emitter)="validarPersona($event)"></app-ej4-hijo>
+<button (click)="deleteUltimaPersona()">Borrar el ultimo</button>
+<button (click)="mayorDeEdad()">Filtrar edad</button>
+<button (click)="dobleEdad()">Calcular el doble</button>

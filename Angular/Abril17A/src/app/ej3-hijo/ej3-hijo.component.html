@@ -1,0 +1,7 @@
+<h3>Asignaturas</h3>
+<select [(ngModel)]="asignaturaSelected">
+    @for (item of listaAsignaturas; track $index) {
+        <option value="{{item}}" >{{item}}</option>
+    } 
+</select>
+<button (click)="enviarAsignatura(asignaturaSelected)">Enviar al Padre</button>
