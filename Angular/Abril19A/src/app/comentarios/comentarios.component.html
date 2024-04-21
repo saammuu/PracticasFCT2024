@@ -1,0 +1,5 @@
+<h3>Mira los comentarios</h3>
+@for (comentario of comentarios; track $index) {
+    <p>{{comentario}}</p>
+}
+<app-hijo-comentario (emitter)="addComments($event)" ></app-hijo-comentario>
