@@ -1,0 +1,28 @@
+<h2>Lista de inmuebles</h2>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (elemento of inmuebles; track elemento.id) {
+                    <tr>
+                        <td>
+                            <img [src]="'../../assets/img/picture' + elemento.id + '.jpg'" alt="Imagen del inmueble" style="width: 100px; height: auto;">
+                            <a class="btn btn-success mt-2" [routerLink]="['/detallesin' , elemento.id]">Más informacion</a>
+                        </td>
+                        <td>
+                            <h4>{{elemento.nombre}}</h4>
+                            <p>{{elemento.detalles}}</p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+  
