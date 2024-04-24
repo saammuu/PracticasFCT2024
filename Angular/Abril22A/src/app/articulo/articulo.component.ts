@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Articulo } from '../model/articulo';
+import { BlogService } from '../services/blog.service';
 
 @Component({
   selector: 'app-articulo',
@@ -8,16 +10,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrl: './articulo.component.css'
 })
 export class ArticuloComponent implements OnInit{
-  articulos = [
-    {ida: '1', nombre: 'Hacking etico', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'},
-    {ida: '2', nombre: 'Legislación de Seguridad en Europa', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'},
-    {ida: '3', nombre: '¿Cómo evitar que te hackeen la cuenta?', descripcion:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'},
-    {ida: '4', nombre: '¿Que es phising?', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'}
-  ];
-  ngOnInit(): void {
-    console.log(`id recibido: ${this.id}`)
-  }
+  articulo: Articulo |undefined;
 
+
+  constructor(private blogService : BlogService){}
   @Input()
   id:string = '';
+  ngOnInit(): void {
+    this.articulo=this.blogService.obtenerUno(this.id);
+  }
+
+
 }

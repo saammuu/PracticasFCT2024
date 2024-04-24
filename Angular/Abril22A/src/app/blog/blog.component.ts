@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Articulo } from '../model/articulo';
+import { BlogService } from '../services/blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -8,11 +10,12 @@ import { RouterLink } from '@angular/router';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class BlogComponent {
-  articulos = [
-    {id: '1', nombre: 'Hacking etico', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'},
-    {id: '2', nombre: 'Legislación de Seguridad en Europa', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'},
-    {id: '3', nombre: '¿Cómo evitar que te hackeen la cuenta?', descripcion:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'},
-    {id: '4', nombre: '¿Que es phising?', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae nibh tincidunt, cursus lacus ac, eleifend ipsum.'}
-  ];
+export class BlogComponent implements OnInit{
+articulos: Articulo[] = [];
+
+constructor(private blogService: BlogService ){}
+
+ngOnInit(): void {
+  this.articulos = this.blogService.obtenerTodos();
+}
 }

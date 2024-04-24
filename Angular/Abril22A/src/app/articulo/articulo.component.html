@@ -1,4 +1,4 @@
-@for (elemento of articulos; track elemento.ida) {
+<!-- @for (elemento of articulos; track elemento.ida) {
     @if (id == elemento.ida) {
         <div class="container text-center">
             <h1 class="mb-4">{{elemento.nombre}}</h1>
@@ -6,4 +6,10 @@
             <p>{{elemento.descripcion}}</p>
         </div>
     }
-}
+} -->
+
+<div class="container text-center">
+    <h1 class="mb-4">{{articulo?.nombre}}</h1>
+    <img class="img-fluid mb-4" [src]="'../../assets/img/imagen' + id + '.jpg'" alt="Imagen del inmueble" style="width: 500px; height: 300px;">
+    <p>{{articulo?.descripcion}}</p>
+</div>
