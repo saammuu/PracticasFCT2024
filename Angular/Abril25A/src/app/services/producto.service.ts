@@ -26,4 +26,7 @@
       return this.http.delete(`${this.url}/${id}`);
     }
 
+    modificarProducto(p:Producto){
+      return this.http.put(this.url,p);
+    }
   }

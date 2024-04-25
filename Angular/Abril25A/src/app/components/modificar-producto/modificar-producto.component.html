@@ -1,0 +1,18 @@
+<!-- modificar-producto.component.html -->
+<h3>Introduzca los datos del producto para actualizar</h3>  
+<div class="container">
+  <label>ID del producto</label> <br>
+  <input type="number" class="form-control" [(ngModel)]="idProducto">
+
+  <label>Nombre del producto</label> <br>
+  <input type="text" class="form-control" [(ngModel)]="nombreProducto">
+
+  <label>Precio del producto</label> <br>
+  <input type="number" class="form-control" [(ngModel)]="precioProducto">
+
+  <label>Discontinuado</label> <br>
+  <input type="number" class="form-control" [(ngModel)]="discontinuado">
+  
+  <br>
+  <button class="btn btn-warning mt-auto" (click)="modificarProducto()">Modificar</button>
+</div>
