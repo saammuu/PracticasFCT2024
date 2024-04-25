@@ -1,0 +1,16 @@
+<h3>Introduzca los datos del producto</h3>  
+<div class="container">
+    <label>ID del producto</label> <br>
+    <input type="number" [(ngModel)]="idProductoSelected">
+    <br>
+    <label>Nombre del producto</label> <br>
+    <input type="text" [(ngModel)]="nombreProductoSelected">
+    <br>
+    <label>Precio del producto</label> <br>
+    <input type="number" [(ngModel)]="precioUnitarioSelected">
+    <br>
+    <label>Discontinuado</label> <br>
+    <input type="number" [(ngModel)]="discontinuadoSelected">
+
+    <button (click)="insertarProducto()">Enviar</button>
+</div>

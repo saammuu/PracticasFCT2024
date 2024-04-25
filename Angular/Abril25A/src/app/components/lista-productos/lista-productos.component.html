@@ -1,0 +1,23 @@
+<h1>Lista de Productos</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            @for (elemento of productos; track elemento.idProducto) {
+                <ul>
+                    <li>
+                        {{elemento.idProducto}} - {{elemento.nombreProducto}} - {{elemento.precioUnitario}} - {{elemento.discontinuado}}
+                    </li>
+                    <!-- <button class="btn btn-primary mr-3" routerLink="alta">Baja</button>
+                    <button class="btn btn-danger" routerLink="baja">Baja</button> -->
+                    <button class="btn btn-danger mr-3" routerLink="alta">Baja</button>
+                </ul>
+            }
+        </div>
+        <div class="col-sm-6">
+            <!-- <a class="btn btn-primary" routerLink="alta">Alta</a> -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
