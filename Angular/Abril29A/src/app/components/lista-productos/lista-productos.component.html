@@ -1,0 +1,30 @@
+<h1>Productos desde el Backend</h1>
+<div class="container">
+    <table class="table ">
+       <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Discontinuado</th>
+            <th></th>
+            <th></th>
+        </tr>
+       </thead>
+       <tbody>
+        @for (item of productos; track item.idProducto) {
+            <tr>
+                <th scope="row">{{ item.idProducto }}</th>
+                <td>{{ item.nombreProducto }}</td>
+                <td>{{ item.precioUnitario }}</td>
+                <td>{{ item.discontinuado }}</td>
+                <td><button class="btn btn-outline-warning" type="button" [routerLink]="['edicion',item.idProducto]">Modificar</button></td>
+                <td><button class="btn btn-outline-danger" type="button" (click)="eliminar(item.idProducto)">Eliminar</button></td>
+            </tr>   
+            }
+       </tbody>
+
+    </table>
+    <button class="btn btn-primary mb-5" routerLink="alta">Alta de un nuevo producto</button>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+    <form [formGroup]="form" #frmProducto = "ngForm" (ngSubmit)="operar()">
+        @if(edicion){
+            <label class="form-label" for="">Id Producto</label>
+             <input class="form-control" placeholder="Id Producto" [readOnly]="true"
+             required formControlName="idProducto">
+        }@else{
+            <label class="form-label" for="">Id Producto</label>
+             <input class="form-control" placeholder="Id Producto"  
+             required formControlName="idProducto">
+        }
+        
+        <label class="form-label" for="">Nombre</label>
+        <input class="form-control" placeholder="Nombre" required formControlName="nombre">
+
+        <label class="form-label" for="">Precio</label>
+        <input class="form-control" placeholder="Precio" required formControlName="precio">
+
+        <label class="form-label" for="">Discontinuado</label>
+        <input class="form-control" placeholder="Discontinuado" required formControlName="discontinuado">
+
+        <!-- <button class="btn btn-outline-success mt-4 " type="submit" [disabled]="frmProducto.invalid">Aceptar</button>
+        <button class="btn btn-outline-danger mt-4 mr-3" type="button" routerLink="">Cancelar</button> -->
+
+        <div class="mt-4">
+            <div class="row">
+                <div class="container col-6 text-center align-items-center">
+                    <button class="btn btn-outline-success" type="submit" [disabled]="frmProducto.invalid">Aceptar</button>
+                </div>
+                <div class="container col-6 text-center align-items-center">
+                    <button class="btn btn-outline-danger ml-3" type="button" routerLink="">Cancelar</button>
+                </div>
+            </div>
+          </div>
+          
+    </form>
+</div>
