@@ -1,0 +1,38 @@
+<h1>Empleados desde el Backend</h1>
+<div class="container">
+    <table class="table ">
+       <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Sueldo</th>
+            <th scope="col">Correo</th>
+        </tr>
+       </thead>
+       <tbody>
+        @for (item of empleados; track item.idEmpleado) {
+            <tr>
+                <th scope="row">{{ item.idEmpleado }}</th>
+                <td>{{ item.nombreEmpleado }}</td>
+                <td>{{ item.sueldoEmpleado }}</td>
+                <td>{{ item.correoEmpleado }}</td>
+                <td>
+                    <button class="btn btn-danger mb-3"(click)="eliminarEmpleado(item.idEmpleado)">X</button>
+                </td>
+            </tr>   
+            }
+       </tbody>
+
+    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary mb-5" routerLink="alta">Alta de un nuevo producto</button>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-warning mb-5" routerLink="modifica">Modificar un producto</button>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

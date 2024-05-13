@@ -1,0 +1,30 @@
+<div class="container">
+    <form [formGroup]="form" #frmEmpleado="ngForm" (ngSubmit)="insertar()">
+
+        <!-- <label class="form-label" for="">Id Empleado</label>
+        <input class="form-control" placeholder="Id Empleado" required formControlName="idEmpleado"> -->
+        
+        
+        <label class="form-label" for="">Nombre</label>
+        <input class="form-control" placeholder="Nombre" required formControlName="nombreEmpleado">
+
+        <label class="form-label" for="">Sueldo</label>
+        <input class="form-control" placeholder="Sueldo" required formControlName="sueldoEmpleado">
+
+        <label class="form-label" for="">Correo</label>
+        <input class="form-control" placeholder="Nombre" required formControlName="correoEmpleado">
+
+
+        <div class="mt-4">
+            <div class="row">
+                <div class="container col-6 text-center align-items-center">
+                    <button class="btn btn-outline-success" type="submit" [disabled]="frmEmpleado.invalid">Aceptar</button>
+                </div>
+                <div class="container col-6 text-center align-items-center">
+                    <button class="btn btn-outline-danger ml-3" type="button" routerLink="">Cancelar</button>
+                </div>
+            </div>
+          </div>
+          
+    </form>
+</div>
